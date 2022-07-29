@@ -1,0 +1,68 @@
+<% include Components/Wrappers/Dashboard/header.ejs %>
+
+
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">New Data</h1>
+
+        <label for="readersDropDown">
+            Select Device
+            <select name="" id="readersDropDown" class="custom-select"></select>
+        </label>
+
+    </div>
+
+
+    <div class="row">
+
+        <!-- Area Chart -->
+        <div class="col-xl-8 col-lg-7 mb-4">
+            <div class="card shadow mb-4 h-100">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 class="m-0 font-weight-bold text-primary">Fingerprint</h6>
+                    <div>Quality Check: <input id="qualityInputBox"/></div>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                    <div>Status: <div id="status">---</div></div>
+
+
+                    <div id="imagediv">image div</div>
+                    <div id="imageGallery">imageGallery</div>
+
+                    <div id="deviceInfo"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pie Chart -->
+        <div class="col-xl-4 col-lg-5 mb-4">
+            <div class="card shadow mb-4 h-100">
+                <!-- Card Header - Dropdown -->
+                <div
+                        class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 class="m-0 font-weight-bold text-primary">Records Saved</h6>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body text-center">
+                    <input type="button" class="btn btn-primary" id="clearButton" value="Clear"
+                           onclick="Javascript:onClear()">
+                    <input type="button" class="btn btn-primary" id="save" value="Save">
+                    <input type="button" class="btn btn-primary" id="start" value="Start"
+                           onclick="Javascript:onStart()">
+                    <input type="button" class="btn btn-primary" id="stop" value="Stop"
+                           onclick="Javascript:onStop()">
+                    <input type="button" class="btn btn-primary" id="info" value="Info"
+                           onclick="Javascript:onGetInfo()">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<% include Components/Wrappers/Dashboard/footer.ejs %>
